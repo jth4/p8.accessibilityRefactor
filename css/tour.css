@@ -1,16 +1,38 @@
 /* Tour page styles */
 
-pre {
-  font-family: 'Open Sans', sans-serif;
-}
-
-.heading{
-  display: inline-block;
-  margin: 0;
-}
-
 .pick{
   width: 40px;
   height: 0%;
   padding: 10px;
+}
+
+.pickheader h1{
+	display: inline;
+	
+}
+
+.card .pickheader {
+	text-align: center;
+}
+
+/* Table Styles */
+
+table {
+	font-size: 1rem;
+	padding: 20px;
+	min-width: 100%;
+}
+
+table caption{
+	font-size: 3rem;
+}
+
+td {
+	margin: 10px;
+	width: 30%;
+}
+
+tr {
+	margin: 10px;
+	width: 8rem;
 }
