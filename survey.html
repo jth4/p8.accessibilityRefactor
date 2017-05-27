@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <div class="main-nav">
+    <div class="main-nav" role="navigation">
       <ul class="nav">
         <li class="name"><a href="index.html">Accessible Frog</a></li>
         <li><a href="tour.html">Tour</a></li>
@@ -18,41 +18,58 @@
       </ul>
     </div>
 
-    <header>
+    <header role="banner">
     	<h1>Accessible Frog</h1>
-    	<h3>We're Frogs Who Love Data</h3>
+    	<h2>We're Frogs Who Love Data</h2>
     </header>
 
-    <main>
+    <main role="main">
       <h1>Survey</h1>
       <div class="card">
         <div class="flex">
           <img class="photo" src= "img/concert01.jpg" alt="Crowd-level view of an Accessible Frog Concert With The Fans Going Wild">
           <div class="container">
-            <form class = "survey">
-              <p>Who is your favorite band member:</p>
-              <input type="radio" name="res" value="John"> John
-              <input type="radio" name="res" value="Hazzard"> Hazzard
-              <input type="radio" name="res" value="Bob"> Bob
-              <input type="radio" name="res" value="Sally"> Sally
 
-              <p>What is your favorite album:</p>
-              <select id="albums" name="select">
-                <option value="1">Party For An Angel</option>
-                <option value="2">A Day Of Old</option>
-                <option value="3">Finding My Shadow</option>
-                <option value="4">Diamond Fireworks</option>
-                <option value="5">Enjoy Your Desire</option>
-                <option value="6">This Is For You</option>
+            <form class = "survey" role="form" aria-label="Survey Form">
+             <fieldset>
+             	<legend>Who Is Your Favorite Band Memeber?</legend>
+              <label class="hidden" for="john">John</label>
+              <input type="radio" name="res" value="John" id="john"> John
+              
+              <label class="hidden" for="hazzard">Hazzard</label>
+              <input type="radio" name="res" value="Hazzard" id="hazzard"> Hazzard
+              
+              <label class="hidden" for="bob">Bob</label>
+              <input type="radio" name="res" value="Bob" id="bob"> Bob
+              
+              <label class="hidden" for="sally">Sally</label>
+              <input type="radio" name="res" value="Sally" id="sally"> Sally
+			 </fieldset>
+			 
+			 <fieldset>
+              <legend>What is your favorite album:</legend>
+              
+              <label class="hidden" for="favoriteAlbumSurvey">What is your favorite album?</label>
+              <select id="favoriteAlbumSurvey" name="select">
+                <option value="1">A Day Of Old</option>
+                <option value="2">Diamond Fireworks</option>
+                <option value="3">Enjoy Your Desire</option>
+                <option value="4">Finding My Shadow</option>
+                <option value="5">Heroic Forever</option>
+                <option value="6">Midnight Fires</option>
                 <option value="7">Music Of My Life</option>
-                <option value="8">Song For Yesterday</option>
-                <option value="9">Heroic Forever</option>
-                <option value="10">Midnight Fires</option>
-                <option value="11">Street Of The Rider</option>
+                <option value="8">Party For An Angel</option>
+                <option value="9">Song For Yesterday</option>
+                <option value="10">Street Of The Rider</option>
+                <option value="11">This Is For You</option>
               </select>
-
-              <p>What is your favorite song:</p>
-              <textarea></textarea>
+			</fieldset>
+			
+			<fieldset>
+              <legend>What is your favorite song:</legend>
+              <label class="hidden" for="favoriteSong">What is your favorite song?</label>
+              <textarea id="favoriteSong"></textarea>
+            </fieldset>  
             </form>
           </div>
         </div>
@@ -61,25 +78,39 @@
       <div class="card">
         <div class="flex">
           <img class="photo" src= "img/the_band.jpg" alt="Accessible Frog's Drummer And Guitarist In The Middle Of A Tasty Jam With Awesome Lighting Effects Making It Look Like They Entered A Time Portal And Are Sailing Through The Dimensional Fabric Of The Cosmos">
+           
             <div class="container">
-              <form class="newsletter">
-                  <p>Name: <input type ="text" name="textfield"></p>
-                  <p>Email: <input type ="email" name="textfield"></p>
-                  <p>Retype Email: <input type ="email" name="textfield"></p>
-                  <button type="submit">Sign Up</button>
+            
+              <form class="newsletter" role="form" aria-label="Newsletter Form">
+              <fieldset>
+              <legend>Sign Up For Our Newsletter</legend>
+              
+              	<label class="hidden" for="newsletterName">Enter Your Name</label>
+                <p>Name: <input type ="text" name="textfield" id="newsletterName"></p>
+                
+                <label class="hidden" for="newsletterEmail">Enter Your Email</label>
+                <p>Email: <input type ="email" name="textfield" id="newsletterEmail"></p>
+                
+                <label class="hidden" for="newsletterEmailConfirm">Please Retype Your Email:</label>
+                <p>Retype Email: <input type ="email" name="textfield" id="newsletterEmailConfirm"></p>
+                  
+                <label class="hidden" for="submitButton" id="submitLabel">Click This Button To Submit Your Information And Sign Up For The Newsletter</label>
+                <button type="submit" id="submitButton" aria-describedby="submitLabel">Sign Up</button>
+              </fieldset>  
               </form>
+              
             </div>
         </div>
       </div>
     </main>
 
-    <footer>
-      <ul>
-        <li><a href="#" class="social twitter"><img src= "img/twitter-32.png"></a></li>
-        <li><a href="#" class="social youtube"><img src= "img/youtube-32.png"></a></li>
-        <li><a href="#" class="social spotify"><img src= "img/spotify-32.png"></a></li>
-      </ul>
-      <p class="copyright">Copyright 2015, Accessible Frog</p>
-    </footer>
+  <footer role="contentinfo">
+    <ul>
+      <li><a href="#" class="social twitter"><div class="hidden">Follow Accessible Frog On Twitter</div></a></li>
+      <li><a href="#" class="social youtube"><div class="hidden">Or check out our videos on YouTube.</div></a></li>
+      <li><a href="#" class="social spotify"><div class="hidden">Or Screw Us Out Of Money On Spotify.</div></a></li>
+    </ul>
+    <p class="copyright">Copyright 2015, Accessible Frog</p>
+  </footer>
   </body>
 </html>
