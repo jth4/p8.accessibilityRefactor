@@ -250,6 +250,6 @@ header h2 {
 
   footer {
     font-size: 1.3em;
-    max-width: 1200px;
+    max-width: 100%;
   }
 }
