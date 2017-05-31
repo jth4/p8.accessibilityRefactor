@@ -33,23 +33,24 @@
             <form class = "survey" role="form" aria-label="Survey Form">
              <fieldset>
              	<legend>Who Is Your Favorite Band Memeber?</legend>
-              <label class="hidden" for="john">John</label>
-              <input type="radio" name="res" value="John" id="john"> John
               
-              <label class="hidden" for="hazzard">Hazzard</label>
-              <input type="radio" name="res" value="Hazzard" id="hazzard"> Hazzard
+              <input type="radio" name="res" value="John" id="john">
+              <label for="john">John</label>
               
-              <label class="hidden" for="bob">Bob</label>
-              <input type="radio" name="res" value="Bob" id="bob"> Bob
+              <input type="radio" name="res" value="Hazzard" id="hazzard">
+              <label for="hazzard">Hazzard</label>
               
-              <label class="hidden" for="sally">Sally</label>
-              <input type="radio" name="res" value="Sally" id="sally"> Sally
+              <input type="radio" name="res" value="Bob" id="bob">
+              <label for="bob">Bob</label>
+              
+              <input type="radio" name="res" value="Sally" id="sally">
+              <label for="sally">Sally</label>
 			 </fieldset>
 			 
 			 <fieldset>
-              <legend>What is your favorite album:</legend>
+              <legend>Album Survey</legend>
               
-              <label class="hidden" for="favoriteAlbumSurvey">What is your favorite album?</label>
+              <label for="favoriteAlbumSurvey">What is your favorite album?</label>
               <select id="favoriteAlbumSurvey" name="select">
                 <option value="1">A Day Of Old</option>
                 <option value="2">Diamond Fireworks</option>
@@ -66,8 +67,8 @@
 			</fieldset>
 			
 			<fieldset>
-              <legend>What is your favorite song:</legend>
-              <label class="hidden" for="favoriteSong">What is your favorite song?</label>
+              <legend>Song Survey</legend>
+              <label for="favoriteSong">What is your favorite song?</label>
               <textarea id="favoriteSong"></textarea>
             </fieldset>  
             </form>
@@ -82,21 +83,24 @@
             <div class="container">
             
               <form class="newsletter" role="form" aria-label="Newsletter Form">
-              <fieldset>
-              <legend>Sign Up For Our Newsletter</legend>
-              
-              	<label class="hidden" for="newsletterName">Enter Your Name</label>
-                <p>Name: <input type ="text" name="textfield" id="newsletterName"></p>
-                
-                <label class="hidden" for="newsletterEmail">Enter Your Email</label>
-                <p>Email: <input type ="email" name="textfield" id="newsletterEmail"></p>
-                
-                <label class="hidden" for="newsletterEmailConfirm">Please Retype Your Email:</label>
-                <p>Retype Email: <input type ="email" name="textfield" id="newsletterEmailConfirm"></p>
-                  
-                <label class="hidden" for="submitButton" id="submitLabel">Click This Button To Submit Your Information And Sign Up For The Newsletter</label>
-                <button type="submit" id="submitButton" aria-describedby="submitLabel">Sign Up</button>
-              </fieldset>  
+	              <fieldset>
+		              <legend>Sign Up For Our Newsletter</legend>
+		              
+		              	<label for="newsletterName">Name:</label>
+		                <input type ="text" name="textfield" id="newsletterName">
+		                <br><br>
+		                
+		                <label for="newsletterEmail">Email:</label>
+		                <input type ="email" name="textfield" id="newsletterEmail">
+		                <br><br>
+		                
+		                <label for="newsletterEmailConfirm">Please Retype Your Email:</label>
+		                <input type ="email" name="textfield" id="newsletterEmailConfirm">
+		               	<br><br>  
+		                  
+		                <label for="submitButton" id="submitLabel">Submit Your Information And Sign Up</label>
+		                <button type="submit" id="submitButton" aria-describedby="submitLabel">Sign Up</button>
+	              </fieldset>  
               </form>
               
             </div>

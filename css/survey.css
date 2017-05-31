@@ -34,11 +34,29 @@ select:focus {
 .container{
   text-align: center;
 }
-.newsletter{
-  text-align: right;
 
+.newsletter{
+  text-align: left;
 }
 
+.newsletter input,
+.survey input:not([type="radio"]),
+select,
+button {
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.newsletter legend {
+	text-align: center;
+	font-size: 1.2em;
+	padding-bottom: 10px;
+}
+
+button {
+	font-size: 1.2em;
+}
 
 /* Styles for larger screens */
 @media screen and (min-width: 840px) {
